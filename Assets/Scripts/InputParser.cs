@@ -34,7 +34,10 @@ public class InputParser : MonoBehaviour
     }
 
     public void Update(){
-        if (Input.GetKeyDown(KeyCode.Return)) getInput();
+        //Input query with enter button
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter)) getInput();
+
+        //Auto-select input area
         if (inputArea.isFocused == false) inputArea.ActivateInputField();
     }
 
